@@ -11,8 +11,8 @@
     $config = json_decode($config);
     
     //Préparation de la requête et formatage des espaces et caractères spéciaux
-    $search = $_POST["search"];
-    if(!isset($_POST['search'])){
+    $search = $_POST["search"];   
+    if(!isset($_POST['search']) || $_POST['search'] == ''){
         $search = 'ski fun video';
     }
     $search = str_replace(" ","+",$search);

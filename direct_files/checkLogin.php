@@ -7,7 +7,7 @@
 
     if(checkLogin($_POST["login"])){
         if(connect()){
-            sendMessage(["content" => "Connexion succeed", "profileType" => checkType($_POST["login"])["type"]]);
+            sendMessage(["content" => "Connexion succeed", "profileType" => checkType($_POST['login'])['type']]);
         }
         else{
             sendError("Bad pass");
